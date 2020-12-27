@@ -4,19 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeClient"
-        mc:Ignorable="d" Height="480" Width="486" WindowStartupLocation="CenterScreen" Style="{StaticResource WindowStyle}" Loaded="MainWindow_OnLoaded" Icon="Image/TimeIcon.ico">
+        mc:Ignorable="d" Height="480" Width="570.8" WindowStartupLocation="CenterScreen" Style="{StaticResource WindowStyle}" Loaded="MainWindow_OnLoaded" Icon="Image/TimeIcon.ico">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF0006FF"/>
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Grid Width="390" Height="480" Margin="48,0,48,0" VerticalAlignment="Bottom">
+    <Grid Width="457" Height="472" VerticalAlignment="Bottom">
         <Grid.RowDefinitions>
-            <RowDefinition Height="480"/>
+            <RowDefinition Height="441.8"/>
+            <RowDefinition Height="38.2"/>
         </Grid.RowDefinitions>
 
-        <Grid Margin="2,119,-2,208">
+        <Grid Margin="0,116,0,172.8">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition/>
@@ -24,7 +25,7 @@
 
 
             <Grid Margin="0,0,0,77">
-                <Label Style="{StaticResource ControlLabelStyle}" Margin="0,-10,16,52.8" Background="Black" Content="Time Zone" FontSize="16"/>
+                <Label Style="{StaticResource ControlLabelStyle}" Margin="-2,-10,18,52.8" Background="Black" Content="Time Zone" FontSize="16"/>
                 <Label x:Name="lbIpServer" Style="{StaticResource ControlLabelStyle}" Content="Ip Server" Margin="0,82,16,-41.2" FontSize="16">
                     <Label.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -42,27 +43,27 @@
 
 
                 <TextBox x:Name="tbIpServer" Margin="-9,81,107.4,35.8" Style="{StaticResource ControlTextBoxStyle}" Background="Black" Foreground="#FFEDEDED" Text="192.168.1.2" FontSize="16"/>
-                <TextBox x:Name="txtPort" HorizontalAlignment="Left" Height="36" Margin="219,81,0,0" TextWrapping="Wrap" Text="90" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.472,0.5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Black" Foreground="White" IsReadOnly="True" FontSize="16"/>
+                <TextBox x:Name="txtPort" HorizontalAlignment="Left" Height="36" Margin="295,81,0,0" TextWrapping="Wrap" Text="90" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.472,0.5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Black" Foreground="White" IsReadOnly="True" FontSize="16"/>
                 <Label x:Name="lbTxtTimeClient" Style="{StaticResource ControlLabelStyle}" Margin="-9,36,0.4,83.8" HorizontalContentAlignment="Left" Background="Black" Foreground="White" Content="" FontSize="16"/>
 
 
             </Grid>
         </Grid>
-        <Grid Background="Black" Margin="2,253,-2,60">
+        <Grid Background="Black" Margin="2,253,0,21.6">
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ListView x:Name="LvConsole" Background="Black" Foreground="White" FontSize="16" FontFamily="{StaticResource FontRegular}" FontStyle="Italic" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,0,10.4,0.2" HorizontalAlignment="Right" Width="380"/>
+            <ListView x:Name="LvConsole" Background="Black" Foreground="White" FontSize="16" FontFamily="{StaticResource FontRegular}" FontStyle="Italic" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,0,-37.8,-0.8" HorizontalAlignment="Right" Width="493"/>
         </Grid>
-        <Grid Margin="0,433,0,-31">
+        <Grid Margin="0,433,0,-31" Grid.RowSpan="2">
             <Button x:Name="btnSync"  Click="BtnSync_OnClick" Margin="89,0,167,49" Foreground="White" Background="#FF00F70F">Sync</Button>
-            <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="237,1,0,50" Width="56" Click="btnExit_Click" Background="#FFFC0000" Foreground="#FFFDFDFD"/>
+            <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="313,1,0,50" Width="56" Click="btnExit_Click" Background="#FFFC0000" Foreground="#FFFDFDFD"/>
         </Grid>
-        <Label x:Name="lb_Title" Content="Client" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" Width="118" Foreground="White" FontSize="36" Height="49"/>
-        <Label x:Name="lbPort" Content="Port" HorizontalAlignment="Left" Margin="292,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.975,3.703" Background="Black" Foreground="#FFFCFCFC" Height="36" Width="42" FontSize="16" FontFamily="/TimeClient;component/Font/#r0c0i Linotte" VerticalContentAlignment="Center"/>
+        <Label x:Name="lb_Title" Content="Client" HorizontalAlignment="Center" Margin="136,45,136,0" VerticalAlignment="Top" Width="118" Foreground="White" FontSize="36" Height="49"/>
+        <Label x:Name="lbPort" Content="Port" HorizontalAlignment="Left" Margin="364,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.975,3.703" Background="Black" Foreground="#FFFCFCFC" Height="36" Width="42" FontSize="16" FontFamily="/TimeClient;component/Font/#r0c0i Linotte" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>
