@@ -1,0 +1,76 @@
+﻿<ResourceDictionary x:Class="TimeClient.WindowStyle"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TimeClient">
+
+    <Style x:Key="LabelWindowStyle" TargetType="Label">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="FontFamily" Value="{StaticResource MainFont}"/>
+        <Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
+    </Style>
+
+    <Style x:Key="WindowStyle" TargetType="Window">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="ResizeMode" Value="CanMinimize"/>
+        <Setter Property="AllowsTransparency" Value="True"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Border Background="{TemplateBinding Background}" Margin="0" CornerRadius="10" ClipToBounds="true" BorderThickness="0" Padding="0"  Width="{TemplateBinding ActualWidth}" Height="{TemplateBinding ActualHeight}">
+                        <Border Background="{TemplateBinding BorderBrush}" Margin="0" CornerRadius="10" ClipToBounds="true" BorderThickness="0" Padding="0" Width="{TemplateBinding ActualWidth}" Height="{TemplateBinding ActualHeight}">
+                            <Grid Margin="5" x:Name="gridContent">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" x:Name="RowTitle"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Grid x:Name="gridTitle" Background="Transparent">
+                                    <Label x:Name="lbTitle" FontSize="16" HorizontalContentAlignment="Center" Height="30" Width="{Binding ElementName=gridTitle, Path=ActualWidth}" Style="{StaticResource LabelWindowStyle}" Content="{TemplateBinding Title}" Background="Transparent" PreviewMouseDown="LbTitle_OnPreviewMouseDown"/>
+
+                                    <Border x:Name="bdrClose" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 4 0 0" Width="22" Height="22" CornerRadius="5" Cursor="Hand" PreviewMouseDown="BdrClose_OnPreviewMouseDown">
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Setter Property="Background" Value="Transparent"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter Property="Background" Value="{StaticResource RedBrush}"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                        <Image Margin="0" Stretch="UniformToFill" Source="../Image/x.png"/>
+                                    </Border>
+
+                                    <Border x:Name="bdrMinimeze" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 2 24 0" Width="22" Height="22" CornerRadius="5" Cursor="Hand" PreviewMouseDown="BdrMinimeze_OnPreviewMouseDown">
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Setter Property="Background" Value="Transparent"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter Property="Background" Value="{StaticResource ButtonHoverBrush}"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                        <Image Margin="0" Stretch="UniformToFill" Source="../Image/underScore.png"/>
+                                    </Border>
+                                </Grid>
+
+                                <Grid Grid.Row="1" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <ContentPresenter Margin="0"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>
