@@ -197,6 +197,5 @@ namespace TimeClient
         {
             this.Close();
         }
-
     }
 }

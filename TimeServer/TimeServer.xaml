@@ -28,19 +28,19 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Label Background="{x:Null}" Foreground="White" Height="40" VerticalAlignment="Center" FontSize="16" Content="IP  Server" VerticalContentAlignment="Center" HorizontalAlignment="Center" Width="98"/>
+                <Label Background="{x:Null}" Foreground="White" Height="40" VerticalAlignment="Center" FontSize="18" Content="IP  Server" VerticalContentAlignment="Center" HorizontalAlignment="Center" Width="98"/>
 
-                <Label x:Name="lbServerIp" Grid.Column="1" Foreground="White" Width="244" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Content="" VerticalContentAlignment="Center" />
+                <Label x:Name="lbServerIp" Grid.Column="1" Foreground="White" Width="244" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Content="" VerticalContentAlignment="Center" />
 
             </Grid>
 
             <Grid Grid.Row="1" Background="Black" Height="59" Margin="0,14,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="19*"/>
-                    <ColumnDefinition Width="47*"/>
+                    <ColumnDefinition Width="128"/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="lbCurrentTime_title" Foreground="White" Height="39" VerticalAlignment="Center" HorizontalAlignment="Center" Width="94" Content="Time Server" FontSize="16" VerticalContentAlignment="Center"/>
-                <Label x:Name="lbCurrentTime" Foreground="White" Height="39" VerticalAlignment="Center" HorizontalAlignment="Center" Width="237" Content="" FontSize="16" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <Label x:Name="lbCurrentTime_title" Foreground="White" Height="39" VerticalAlignment="Top" HorizontalAlignment="Center" Width="117" Content="Time Server" FontSize="18" VerticalContentAlignment="Center" Margin="9,10,2,0"/>
+                <Label x:Name="lbCurrentTime" Foreground="White" Height="39" VerticalAlignment="Center" HorizontalAlignment="Center" Width="237" Content="" FontSize="18" Grid.Column="1" VerticalContentAlignment="Center" Margin="7,9,10.4,11"/>
             </Grid>
 
         </Grid>
@@ -52,7 +52,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ListView x:Name="lvIpConnect" Background="Black" Foreground="White" FontSize="13" FontFamily="{StaticResource FontRegular}" FontStyle="Italic" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="-35,0,-53,0"/>
+            <ListView x:Name="lvIpConnect" Background="Black" Foreground="White" FontSize="16" FontFamily="{StaticResource FontRegular}" FontStyle="Italic" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="-35,0,-53,0"/>
         </Grid>
         <Label x:Name="lb_Title" Content="Server" HorizontalAlignment="Left" Margin="180,11,0,0" VerticalAlignment="Top" Width="118" Foreground="White" FontSize="36" Height="49"/>
         <Button x:Name="btnRefresh" Content="" Margin="380,314,54,0" VerticalAlignment="Top" RenderTransformOrigin="-1.859,1.76" Height="32" BorderBrush="{x:Null}" Width="32" Click="btnRefresh_Click" Foreground="{x:Null}" >
