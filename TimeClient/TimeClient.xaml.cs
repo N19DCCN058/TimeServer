@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -12,6 +11,7 @@ namespace TimeClient
 {
     public partial class MainWindow : Window
     {
+        private DispatcherTimer timer;
         public IPAddress IP = null;
         public MainWindow()
         {
@@ -21,10 +21,20 @@ namespace TimeClient
 
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
+            timer = new DispatcherTimer()
+            {
+                Interval = new TimeSpan(0, 0, 0, 0, 500),
+                IsEnabled = true
+            };
+            timer.Tick += TimerOnTick;
+            timer.Start();
             lbTimeZone.Content = TimeZoneInfo.Local.ToString();
             tbIpServer.Focus();
         }
-
+        private void TimerOnTick(object sender, EventArgs e)
+        {
+            lbTxtTimeClient.Content = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
         private void BtnSync_OnClick(object sender, RoutedEventArgs e)
         {
             if (!checkIP())
@@ -116,14 +126,14 @@ namespace TimeClient
                 value[1] = ConverStringToDate(encoding.GetString(receive1));
                 value[2] = ConverStringToDate(encoding.GetString(receive2));
 
-                //caculator ofset time
+                //calculator ofset time
 
                 TimeSpan f1 = value[1].Subtract(value[0]);
                 TimeSpan f2 = value[2].Subtract(value[3]);
 
                 TimeSpan time = f1 + f2;
 
-                double timeOfset = Math.Round(time.TotalMilliseconds / 2, MidpointRounding.ToEven);
+                double timeOfset = Math.Round(time.TotalMilliseconds / 2);
 
                 //add ofset time
                 DateTime trueTime = DateTime.Now.AddMilliseconds(timeOfset);

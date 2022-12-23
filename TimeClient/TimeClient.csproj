@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Image\TimeIcon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -130,13 +131,10 @@
     <Resource Include="Image\x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\TimeIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image\triangle.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="UTCTimeZone.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TimeIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
