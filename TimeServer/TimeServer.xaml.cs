@@ -11,6 +11,7 @@ namespace TimeServer
 
     public partial class MainWindow : Window
     {
+        //Init
         public MainWindow()
         {
             InitializeComponent();
