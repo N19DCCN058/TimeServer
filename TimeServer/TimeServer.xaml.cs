@@ -8,9 +8,7 @@ using System.Windows.Threading;
 
 namespace TimeServer
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
