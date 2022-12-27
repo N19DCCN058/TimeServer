@@ -4,25 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeServer"
-        mc:Ignorable="d" Height="480" Width="486" Style="{StaticResource WindowStyle}" Loaded="MainWindow_OnLoaded" Closed="MainWindow_OnClosed" WindowStyle="None" AllowsTransparency="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True" Left="0" Top="0" Foreground="White" >
+        mc:Ignorable="d" Height="480" Width="578.8" Style="{StaticResource WindowStyle}" Loaded="MainWindow_OnLoaded" Closed="MainWindow_OnClosed" WindowStyle="None" AllowsTransparency="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True" Left="0" Top="0" Foreground="White" >
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="White" Offset="1"/>
             <GradientStop Color="#FF00FA85"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Grid Height="466" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="466" Margin="0,0,0,4">
+    <Grid Height="466" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="531">
         <Grid.RowDefinitions>
             <RowDefinition Height="360"/>
         </Grid.RowDefinitions>
 
-        <Grid Margin="44,287,0,-66" RenderTransformOrigin="0.494,0.497" HorizontalAlignment="Left" Width="382">
+        <Grid Margin="38,288,0,-67.2" RenderTransformOrigin="0.494,0.497" HorizontalAlignment="Left" Width="458">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Grid Background="Black" Margin="0,14,0,69" Grid.RowSpan="2">
+            <Grid Background="Black" Margin="0,14,0,0.4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="118"/>
                     <ColumnDefinition/>
@@ -55,7 +55,7 @@
             <ListView x:Name="lvIpConnect" Background="Black" Foreground="White" FontSize="16" FontFamily="{StaticResource FontRegular}" FontStyle="Italic" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="-35,0,-53,0"/>
         </Grid>
         <Label x:Name="lb_Title" Content="Server" HorizontalAlignment="Left" Margin="180,11,0,0" VerticalAlignment="Top" Width="118" Foreground="White" FontSize="36" Height="49"/>
-        <Button x:Name="btnRefresh" Content="" Margin="380,314,54,0" VerticalAlignment="Top" RenderTransformOrigin="-1.859,1.76" Height="32" BorderBrush="{x:Null}" Width="32" Click="btnRefresh_Click" Foreground="{x:Null}" >
+        <Button x:Name="btnRefresh" Content="" Margin="448,314,51,0" VerticalAlignment="Top" RenderTransformOrigin="-1.859,1.76" Height="32" BorderBrush="{x:Null}" Width="32" Click="btnRefresh_Click" Foreground="{x:Null}" >
             <Button.Background>
                 <ImageBrush ImageSource="refresh.png"/>
             </Button.Background>
